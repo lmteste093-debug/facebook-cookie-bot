@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  facebook-cookie-bot:
+    build: .
+    container_name: facebook-cookie-bot
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./cookies:/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/healthz"]
+      interval: 2m
+      timeout: 10s
+      retries: 3
