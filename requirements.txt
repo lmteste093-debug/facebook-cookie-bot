@@ -1,4 +1,3 @@
-cd C:\Users\Lewis Magira\Desktop\facebook-cookie-bot
 echo selenium>=4.15.0 > requirements.txt
 echo flask>=3.0.0 >> requirements.txt
 echo python-dotenv>=1.0.0 >> requirements.txt
